@@ -21,6 +21,7 @@
 @* Панель сортировки *@
 <div class="d-flex flex-row-reverse border border-1 p-1 mt-3">
     <form id="sortingForm" asp-page="/Index" method="get" class="ms-2">
+
         <select name="sort" class="form-select" aria-label="Сортировка" onchange="document.getElementById('sortingForm').submit()">
             @foreach (string item in Enum.GetNames(typeof(ProductSorting))) {
                 if (Model.Sorting.ToString() == item) {
